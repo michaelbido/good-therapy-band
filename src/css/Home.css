@@ -1,0 +1,30 @@
+
+
+.home {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.home-banner {
+  background-image: url('../images/banner-background-logo-min.jpg');
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 150px 0 150px 0;
+}
+
+.hero {
+  align-self: center;
+  width: 100%;
+}
+
+.social-container {
+
+}
+.social-container .facebook_iframe {
+
+}
