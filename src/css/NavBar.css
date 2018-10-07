@@ -21,7 +21,7 @@
   text-transform: uppercase;
   letter-spacing: 4px;
   font-family: 'Cabin', Arial, sans-serif;
-  margin: 0 6px 0 6px;
+  margin: 0 12px 0 12px;
 }
 
 .navbar button:focus {
