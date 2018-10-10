@@ -9,3 +9,23 @@ body {
   color:rgba(0, 0, 0, 0.9);
   position: relative;
 }
+
+a:link {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  background-color: black;
+  color: lightcyan;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
