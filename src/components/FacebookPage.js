@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../css/Facebook';
+import '../css/Facebook.css';
 
 class FacebookPage extends Component {
 

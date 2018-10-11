@@ -1,0 +1,17 @@
+.circle-image {
+  margin: 0 20px 0 20px;
+  padding: 0;
+  display: inline-block;
+}
+
+.circle-image img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.circle-container {
+  font-size: 24px;
+  display: inline-block;
+  max-width: 1000px;
+  padding: 2em 0 2em 0;
+}

@@ -10,6 +10,7 @@ body {
   position: relative;
 }
 
+/*
 a:link {
   text-decoration: none;
   background-color: black;
@@ -29,3 +30,4 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
+*/

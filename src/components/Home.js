@@ -1,6 +1,31 @@
 import React, { Component } from 'react';
 
+import CircleProfiles from './CircleProfile';
+
 import '../css/Home.css'
+
+const bandMembers = [
+  {
+    name: "David",
+    img: require("../images/profiles/david.jpg")
+  },
+  {
+    name: "Sara",
+    img: require("../images/profiles/sara.jpg")
+  },
+  {
+    name: "Donna",
+    img: require("../images/profiles/donna.jpg")
+  },
+  {
+    name: "Arthur",
+    img: require("../images/profiles/arthur.jpg")
+  },
+  {
+    name: "Chuck",
+    img: require("../images/profiles/chuck.jpg")
+  },
+]
 
 class Home extends Component {
 
@@ -32,6 +57,7 @@ class Home extends Component {
             <p id="quote-author">- Neil Young</p>
           </div>
         </div>
+        <CircleProfiles band={bandMembers} />
       </div>
     )
   }
