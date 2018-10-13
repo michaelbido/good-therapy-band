@@ -12,7 +12,7 @@ class CircleProfiles extends Component {
   singleProfile = (url, name, i) => {
     return (
       <div key={i} className="circle-image">
-        <img src={url} />
+        <img src={url} alt={`Pic of ${name}`} />
         <p>{name}</p>
       </div>
     )
