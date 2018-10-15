@@ -6,23 +6,28 @@ import '../css/Home.css'
 
 const bandMembers = [
   {
-    name: "David",
+    name: "David Huffman",
+    role: "Guitar / Harmonica / Vocals",
     img: require("../images/profiles/david.jpg")
   },
   {
-    name: "Sara",
+    name: "Sara Pray",
+    role: "Guitar / Vocals",
     img: require("../images/profiles/sara.jpg")
   },
   {
-    name: "Donna",
+    name: "Donna Ezzell",
+    role: "Vocals / Flute / Percussion",
     img: require("../images/profiles/donna.jpg")
   },
   {
-    name: "Arthur",
+    name: "Arthur Hamilton",
+    role: "Bass",
     img: require("../images/profiles/arthur.jpg")
   },
   {
-    name: "Chuck",
+    name: "Chuck Geisel",
+    role: "Drums",
     img: require("../images/profiles/chuck.jpg")
   },
 ]
@@ -48,7 +53,6 @@ class Home extends Component {
             <p>Like us on &nbsp;
               <a href="https://www.facebook.com/Goodtherapyband" rel="noopener noreferrer" target="_blank">Facebook</a>
             </p>
-            <iframe id="facebook_iframe" className="facebook_iframe"></iframe>
           </div>
         </div>
         <div className="hero-banner">
@@ -57,7 +61,13 @@ class Home extends Component {
             <p id="quote-author">- Neil Young</p>
           </div>
         </div>
-        <CircleProfiles band={bandMembers} />
+        <div>
+          <div className="band-description">
+            <h2>Meet the band</h2>
+            <p>from the heart of texas</p>
+          </div>
+          <CircleProfiles band={bandMembers} />
+        </div>
       </div>
     )
   }
@@ -65,6 +75,4 @@ class Home extends Component {
 
 export default Home;
 
-//<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoodtherapyband%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=280016605231" width="340" height="214" style={{overflow:'hidden'}} scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-
-
+//             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoodtherapyband%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=280016605231" width="340" height="214" style={{overflow:'hidden'}} scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>

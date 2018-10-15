@@ -6,6 +6,7 @@
   background-size: cover;
   background-position: center center;
   border: none;
+  position: relative;
 }
 
 .navbar button {
@@ -51,11 +52,18 @@
 }
 
 .nav-logo {
-  
-  width: 65%;
+  width: 75%;
   max-width: 1050px;
   display: block;
   margin: auto;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
 }
 
 .footer-fade {

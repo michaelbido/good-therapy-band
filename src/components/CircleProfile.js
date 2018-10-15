@@ -9,11 +9,12 @@ class CircleProfiles extends Component {
     this.singleProfile = this.singleProfile.bind(this);
   }
 
-  singleProfile = (url, name, i) => {
+  singleProfile = (url, name, role, i) => {
     return (
       <div key={i} className="circle-image">
         <img src={url} alt={`Pic of ${name}`} />
         <p>{name}</p>
+        <p className="caption">{role}</p>
       </div>
     )
   }
@@ -23,7 +24,7 @@ class CircleProfiles extends Component {
       <div className="circle-container">
       {
         this.props.band.map((member, index) => {
-          return this.singleProfile(member.img, member.name, index);
+          return this.singleProfile(member.img, member.name, member.role, index);
         })
       }
     </div>

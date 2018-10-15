@@ -50,6 +50,26 @@
   justify-content: center;
 }
 
+.band-description {
+  margin: 2em 0 2em 0;
+}
+
+.band-description h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: 'Cabin', Arial, sans-serif;
+  font-size: 32px;
+  margin: 4px 0 4px 0;
+}
+
+.band-description p {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: 'Cabin', Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
 .band-name-container {
   flex-grow: 3;
   text-align: left;
