@@ -44,8 +44,7 @@
   flex-wrap: wrap;
   max-width: 900px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1em auto 1em auto;
   align-self: flex-start;
   justify-content: center;
 }
@@ -71,37 +70,33 @@
 }
 
 .band-name-container {
-  flex-grow: 3;
+  flex-grow: 4;
   text-align: left;
+  margin: auto 1em auto 1em;
 }
 
 .band-name-container h2 {
-  font-weight: bold;
-  font-size: 48px;
-  letter-spacing: 5px;
+  font-size: 56px;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  font-family: 'Cabin', Arial, sans-serif;
+  letter-spacing: 4px; 
+  margin: 0;
 }
 
 .band-name-container p {
-  font-size: 24px;
+  font-family: 'Cabin', Arial, sans-serif;
+  font-size: 36px;
+  margin: 0;
   text-transform: lowercase;
-  letter-spacing: 4px;
 }
 
 .social-container {
   flex-grow: 1;
-
+  margin: auto 1em auto 1em;
 }
 
 .social-container p {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 5px;
-}
-
-.social-container
-.social-container .facebook_iframe {
-
+  font-weight: bold;
 }

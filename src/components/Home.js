@@ -46,13 +46,15 @@ class Home extends Component {
       <div className="home">
         <div className="flex-container">
           <div className="band-name-container">
-            <h2>Good Therapy</h2>
-            <p>through soft classic rock</p>
+            <h2>Good</h2>
+            <h2>Therapy</h2>
+            <hr />
+            <p>classical</p>
+            <p>rock</p>
           </div>
           <div className="social-container">
-            <p>Like us on &nbsp;
-              <a href="https://www.facebook.com/Goodtherapyband" rel="noopener noreferrer" target="_blank">Facebook</a>
-            </p>
+            <p>Like us on Facebook </p>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoodtherapyband%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=280016605231" width="340" height="214" style={{overflow:'hidden'}} scrolling="no" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </div>
         </div>
         <div className="hero-banner">

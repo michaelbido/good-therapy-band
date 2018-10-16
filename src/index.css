@@ -11,24 +11,10 @@ body {
   position: relative;
 }
 
-/*
-a:link {
-  text-decoration: none;
-  background-color: black;
-  color: white;
+h2{
+  font-family: 'Cabin', Arial, sans-serif;
 }
 
-a:visited {
-  text-decoration: none;
-  background-color: black;
-  color: lightcyan;
+p {
+  font-family: 'Roboto', Arial, sans-serif;
 }
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: underline;
-}
-*/
