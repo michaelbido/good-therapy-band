@@ -34,7 +34,7 @@
 
 .navbar button:hover {
   border-top: solid white 2px;
-  
+  cursor: pointer;
 }
 
 .navbar-fade {

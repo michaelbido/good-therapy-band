@@ -27,10 +27,35 @@ const images = [
 
 class Gallery extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      displayModal: false,
+      image: ""
+    }
+  }
+
+  selectImage = (url) => {
+    this.setState({
+      displayModal: true,
+      image: url
+    })
+    document.getElementById('lightbox-id').style.display = 'block';
+  }
+
+  deselectImage = () => {
+    this.setState({
+      displayModal: false,
+      image: ""
+    })
+    document.getElementById('lightbox-id').style.display = 'none';
+  }
+
   singleImage = (url, info, i) => {
     return (
-      <div className="galleryImage-container" key={i}>
-        <img src={url} alt={`${info}`} />
+      <div className="gallery-image-container" key={i}>
+        
+        <img src={url} alt={`${info}`} onClick={() => this.selectImage(url)}/>
       </div>
     )
   }
@@ -38,12 +63,18 @@ class Gallery extends Component {
   render() {
     return (
       <div className="gallery-container">
-        <h2>Gallery</h2>
-        {
-          images.map((member, index) => {
-            return this.singleImage(member.img, "Pic of Good Therapy", index);
-          })
-        }
+        <div className="lightbox" id="lightbox-id" onClick={() => this.deselectImage()}>
+          <span className="close-button">&times;</span>
+          <img src={this.state.image} alt="Pic of Good Therapy"/>
+        </div>
+        <div className="gallery">
+          <h2>Gallery</h2>
+          {
+            images.map((member, index) => {
+              return this.singleImage(member.img, "Pic of Good Therapy", index);
+            })
+          }
+        </div>
       </div>
     )
   }
