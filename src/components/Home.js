@@ -34,16 +34,42 @@ const bandMembers = [
 
 class Home extends Component {
 
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
-
     }
   }
 
+  componentDidMount() {
+    // const doUpdate = () => {
+    //   window.FB.XFBML.parse();
+    // }
+    
+    // window.fbAsyncInit = function() {
+    //   window.FB.init({
+    //     appId: "266877780635149",
+    //     xfbml            : true,
+    //     version          : 'v3.1'
+    //   });
+    // };
+
+    // if (!this.props.sdkStatus) {
+    //   if (typeof window.FB !== 'undefined') {
+    //     this.props.updateStatus();
+    //   }
+    // }
+
+    // if (this.props.sdkStatus) {
+    //   doUpdate();
+    //   console.log("it happened");
+    // }
+    
+  }
+
+
   render() {
     return (
-      <div className="home">
+      <div className="home" id="home_id">
         <div className="flex-container">
           <div className="band-name-container">
             <h2>Good</h2>
@@ -54,7 +80,7 @@ class Home extends Component {
           </div>
           <div className="social-container">
             <p>Like us on Facebook </p>
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoodtherapyband%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=280016605231" width="340" height="214" style={{overflow:'hidden'}} scrolling="no" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoodtherapyband%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=280016605231" width="340" height="214" style={{overflow:'hidden'}} frameBorder="0" allowtransparency="true" allow="encrypted-media" title="GT Facebook Plugin"></iframe>
           </div>
         </div>
         <div className="hero-banner">
@@ -78,3 +104,4 @@ class Home extends Component {
 export default Home;
 
 //             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoodtherapyband%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=280016605231" width="340" height="214" style={{overflow:'hidden'}} scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+//             <div className="fb-page" data-href="https://www.facebook.com/goodtherapyband/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/goodtherapyband/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/goodtherapyband/">Good Therapy</a></blockquote></div>

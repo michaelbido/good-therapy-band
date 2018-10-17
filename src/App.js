@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import logo from './logo.svg';
 import './App.css';
 import * as routes from './constants/routes';
 
@@ -15,6 +14,20 @@ import Contact from './components/Contact';
 import NotFound from './components/NotFound';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      sdkActive: false,
+    }
+  }
+
+  sdkStatusUpdate = () => {
+    console.log('inapp')
+    if (!this.state.sdkActive) {
+      this.setState({sdkActive: true});
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -22,7 +35,10 @@ class App extends Component {
           <div className="router-container">
               <NavBar />
               <Switch>
-                <Route exact path={routes.HOME} component={() => <Home />} />
+                <Route exact path={routes.HOME} component={() => 
+                  <Home updateStatus={() => this.sdkStatusUpdate()} sdkStatus={this.state.sdkActive}/>
+                  }
+                />
                 <Route path={routes.GALLERY} component={() => <Gallery />} />
                 <Route path={routes.MUSIC} component={() => <Music />} />
                 <Route path={routes.EVENTS} component={() => <Events />} />

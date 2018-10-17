@@ -24,9 +24,9 @@
   font-family: 'Lobster','Times New Roman', Times, serif;
   letter-spacing: 4px;
   font-size: 3em;
-  color: rgba(225, 225, 225, 1.0);
+  color: rgba(235, 235, 235, 1.0);
   padding: 0 32px 0 32px;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -42,7 +42,7 @@
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 1100px;
   width: 100%;
   margin: 1em auto 1em auto;
   align-self: flex-start;
@@ -70,9 +70,11 @@
 }
 
 .band-name-container {
-  flex-grow: 4;
+  flex-grow: 6;
   text-align: left;
   margin: auto 1em auto 1em;
+  max-width: 900px;
+  
 }
 
 .band-name-container h2 {
