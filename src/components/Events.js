@@ -5,7 +5,9 @@ import '../css/Events.css'
 class Events extends Component {
   render() {
     return (
-      <div></div>
+      <div className="events-container">
+        <h2>Events</h2>
+      </div>
     )
   }
 }
