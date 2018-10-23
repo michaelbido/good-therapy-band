@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 
 import './App.css';
 import * as routes from './constants/routes';
@@ -18,7 +19,19 @@ class App extends Component {
     super();
     this.state = {
       sdkActive: false,
+      eventData: null
     }
+  }
+
+  componentWillMount() {
+    axios.get('http://localhost:8081/api/events')
+      .then((res) => {
+        this.setState({eventData: res});
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
   sdkStatusUpdate = () => {
@@ -41,7 +54,9 @@ class App extends Component {
                 />
                 <Route path={routes.GALLERY} component={() => <Gallery />} />
                 <Route path={routes.MUSIC} component={() => <Music />} />
-                <Route path={routes.EVENTS} component={() => <Events />} />
+                <Route path={routes.EVENTS} component={() => 
+                  <Events data={this.state.eventData}/>} 
+                />
                 <Route path={routes.CONTACT} component={() => <Contact />} />
                 <Route component={() => <NotFound />} />
               </Switch>

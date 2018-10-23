@@ -7,8 +7,10 @@ class Contact extends Component {
     return (
       <div>
         <h2>Contact</h2>
-        <p>wasdfaedg uh asdfh sdhszdg yadf sdfysr</p>
-        <p>s dgfujs yrfidfyi d sdfga ewrst </p>
+        <div className="flex-container">
+          <div></div>
+          <div></div>
+        </div>
       </div>
     )
   }
