@@ -8,7 +8,11 @@ class Contact extends Component {
       <div>
         <h2>Contact</h2>
         <div className="flex-container">
-          <div></div>
+          <div>
+            <form action="">
+            
+            </form>
+          </div>
           <div></div>
         </div>
       </div>
