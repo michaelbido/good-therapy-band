@@ -44,7 +44,6 @@ class NavBar extends Component {
             <Link to={routes.CONTACT}><button onClick={() => this.scrollUnder()}>Contact</button></Link>
           </div>
         </div>
-        <div className="navbar-fade"></div>
       </div>
     )
   }

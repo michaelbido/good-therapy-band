@@ -49,8 +49,7 @@ class App extends Component {
               <NavBar />
               <Switch>
                 <Route exact path={routes.HOME} component={() => 
-                  <Home updateStatus={() => this.sdkStatusUpdate()} sdkStatus={this.state.sdkActive}/>
-                  }
+                  <Home updateStatus={() => this.sdkStatusUpdate()} sdkStatus={this.state.sdkActive}/>}
                 />
                 <Route path={routes.GALLERY} component={() => <Gallery />} />
                 <Route path={routes.MUSIC} component={() => <Music />} />
