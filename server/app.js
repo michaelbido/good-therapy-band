@@ -30,7 +30,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
 
-app.get('/api/events',cors(), function(req, res, next) {
+app.get('/api/events', cors(), function(req, res, next) {
   res.send(eventsTest);
   console.log("data was requested");
 });

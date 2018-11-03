@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import '../css/Gallery.css'
 
+const loading = require("../images/loading-spin-min.gif");
+
 const images = [
   { img: require("../images/gallery/galleryGT (1).jpg") },
   { img: require("../images/gallery/galleryGT (2).jpg") },
@@ -30,6 +32,7 @@ class Gallery extends Component {
   constructor() {
     super();
     this.state = {
+      loaded: [],
       displayModal: false,
       image: ""
     }
@@ -54,29 +57,40 @@ class Gallery extends Component {
   singleImage = (url, info, i) => {
     return (
       <div className="gallery-image-container" key={i}>
-        
         <img src={url} alt={`${info}`} onClick={() => this.selectImage(url)}/>
       </div>
     )
   }
 
   render() {
-    return (
-      <div className="gallery-container">
-        <div className="lightbox" id="lightbox-id" onClick={() => this.deselectImage()}>
-          <span className="close-button">&times;</span>
-          <img src={this.state.image} alt="Pic of Good Therapy"/>
-        </div>
-        <div className="gallery">
+
+    if (this.state.loading) {
+      return (
+        <div className="gallery-container">
           <h2>Gallery</h2>
-          {
-            images.map((member, index) => {
-              return this.singleImage(member.img, "Pic of Good Therapy", index);
-            })
-          }
+          <img src={loading} alt="loading gif"/>
         </div>
-      </div>
-    )
+      )
+    }
+
+    else {
+      return (
+        <div className="gallery-container">
+          <div className="lightbox" id="lightbox-id" onClick={() => this.deselectImage()}>
+            <span className="close-button">&times;</span>
+            <img src={this.state.image} alt="Pic of Good Therapy"/>
+          </div>
+          <div className="gallery">
+            <h2>Gallery</h2>
+            {
+              images.map((member, index) => {
+                return this.singleImage(member.img, "Pic of Good Therapy", index);
+              })
+            }
+          </div>
+        </div>
+      )
+    }
   }
 }
 

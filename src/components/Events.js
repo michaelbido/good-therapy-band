@@ -10,9 +10,9 @@ class Events extends Component {
     super();
   }
 
-  singleEvent = (date, title, location) => {
+  singleEvent = (date, title, location, index) => {
     return (
-      <div className="event">
+      <div className="event" key={index}>
         <h2 className="date-container">{date}</h2>
         <h2>{title}</h2>
         <p>{location}</p>
@@ -22,7 +22,6 @@ class Events extends Component {
 
   render() {
     
-
     if (this.props.data == null) {
       return (
         <div className="events-container">
@@ -38,7 +37,7 @@ class Events extends Component {
           <h2>Events</h2>
           {
             this.props.data.data.info.map((data, index) => {
-              return this.singleEvent(data.date, data.title, data.location)
+              return this.singleEvent(data.date, data.title, data.location, index)
             })
           }
         </div>
