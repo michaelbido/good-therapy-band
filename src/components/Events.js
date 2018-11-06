@@ -9,7 +9,7 @@ class Events extends Component {
   constructor(props) {
     super();
     this.state = {
-      loadFbEvents: true,
+      loadFbEvents: false,
     }
   }
 
