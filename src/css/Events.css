@@ -1,26 +1,40 @@
 .event {
-    margin: 1em auto 0 auto;
-    padding: 0 0 1em 0;
-    text-align: center;
-    width: 60%;
-    border: 2px solid black;
+  margin: 1em auto 0 auto;
+  padding: 0 0 1em 0;
+  text-align: center;
+  width: 70%;
+  border: 2px solid black;
 }
 
 .event p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .events-container {
-    max-width: 1200px;
-    margin: 0 auto 0 auto;
-    padding: 0 0 1em 0;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  padding: 0 0 2em 0;
+  text-align: center;
+}
+
+.events-container p {
+  padding-bottom: 1em;
+}
+
+.events-container iframe {
+  margin-left: auto;
+  margin-right: auto;
+  width: 340px;
+  height: 500px;
+  display: block;
+  background-color: grey;
 }
 
 .date-container {
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 auto 0 auto;
-    padding: 1em 0.5em 1em 0.5em;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 auto 0 auto;
+  padding: 1em 0.5em 1em 0.5em;
 }
