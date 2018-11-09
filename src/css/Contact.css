@@ -82,4 +82,6 @@
 .social-reach-container {
   flex-grow: 1;
   margin: auto 1em auto 1em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }

@@ -19,7 +19,7 @@ class Contact extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('/user', {
+    axios.post('/api/newcontact', {
       name: this.state.whoisthis,
       email: this.state.email,
       message: this.state.message
@@ -64,7 +64,7 @@ class Contact extends Component {
             </form>
           </div>
           <div className="social-reach-container">
-            <h3>Reach out to us on <a href="https://www.facebook.com/GoodTherapyband">Facebook</a>!</h3>
+            <h3>Contact us on <a href="https://www.facebook.com/GoodTherapyband">Facebook</a>!</h3>
             <iframe title="Facebook Contact" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgoodtherapyband%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=266877780635149" width="100%" height="500" style={{border:'none',overflow:'hidden', maxWidth: '340px'}} scrolling="no" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>          </div>
         </div>
       </div>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import '../css/Music.css'
 
+const loading = require("../images/loading-spin-min.gif");
+
 class Music extends Component {
   render() {
     return (
