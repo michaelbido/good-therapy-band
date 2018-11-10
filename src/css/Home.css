@@ -102,3 +102,7 @@
   letter-spacing: 5px;
   font-weight: bold;
 }
+
+.social-container iframe {
+  background-color: rgb(235, 235, 235);
+}

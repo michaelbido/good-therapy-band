@@ -7,6 +7,8 @@ const app = express();
 
 var contact = [ ];
 
+const PORT_ADDR = 80;
+
 const eventsTest = {
   info: [
     {
@@ -75,8 +77,8 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Something went wrong!')
 });
 
-app.listen(8081, function() {
-  console.log('Server magic booted up on port 8081!');
+app.listen(PORT_ADDR, function() {
+  console.log(`Server magic booted up on port ${PORT_ADDR}!`);
 });
 
 app.all('*', function(req, res) {

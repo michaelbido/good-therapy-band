@@ -25,10 +25,10 @@ class Contact extends Component {
       message: this.state.message
     })
     .then(function (response) {
-      console.log(response);
+      //console.log(response);
     })
     .catch(function (error) {
-      console.log(error);
+      //console.log(error);
     });
   }
 

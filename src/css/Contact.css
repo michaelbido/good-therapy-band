@@ -85,3 +85,7 @@
   text-transform: uppercase;
   letter-spacing: 4px;
 }
+
+.social-reach-container iframe {
+  background-color: rgb(235, 235, 235);
+}

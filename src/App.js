@@ -24,13 +24,13 @@ class App extends Component {
   }
 
   componentWillMount() {
-    axios.get('http://localhost:8081/api/events')
+    axios.get('/api/events')
       .then((res) => {
         this.setState({eventData: res});
-        console.log(res);
+        //console.log(res);
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       })
   }
 
