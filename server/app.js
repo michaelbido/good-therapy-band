@@ -7,7 +7,7 @@ const app = express();
 
 var contact = [ ];
 
-const PORT_ADDR = 80;
+const PORT_ADDR = 3001;
 
 const eventsTest = {
   info: [
