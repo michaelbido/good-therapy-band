@@ -67,7 +67,7 @@ app.post('/api/newcontact', function(req, res, next) {
     res.sendStatus(400);
   }
   else {
-    contact.push(req.body);
+    //contact.push(req.body);
     res.send("Message sent");
   }
 });
