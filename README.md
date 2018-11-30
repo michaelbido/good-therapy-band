@@ -5,3 +5,5 @@ A project by Michael Bido. All rights reserved.
 This website was created for Good Therapy, a classic rock band in Texas.
 
 Created with React.
+
+© 2018 Michael Bido.
