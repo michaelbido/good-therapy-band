@@ -13,12 +13,15 @@ class Events extends Component {
     }
   }
 
-  singleEvent = (date, title, location, index) => {
+  singleEvent = ({date, fbLink, locationAddress, locationName, time, title}, index) => {
     return (
       <div className="event" key={index}>
         <h2 className="date-container">{date}</h2>
-        <h2>{title}</h2>
-        <p>{location}</p>
+        <h2>{locationName}</h2>
+        <p>{locationAddress}</p>
+        <p>@</p>
+        <p>{time}</p>
+        <a href={fbLink}>More Info</a>
       </div>
     )
   }
@@ -45,12 +48,13 @@ class Events extends Component {
     }
 
     else {
+      
       return (
         <div className="events-container">
           <h2>Events</h2>
           {
-            this.props.data.data.info.map((data, index) => {
-              return this.singleEvent(data.date, data.title, data.location, index)
+            Object.keys(this.props.data).map((key, index) => {
+              return this.singleEvent({...this.props.data[key]}, index)
             })
           }
         </div>

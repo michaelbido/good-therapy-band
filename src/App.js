@@ -26,11 +26,13 @@ class App extends Component {
   componentWillMount() {
     axios.get('/api/events')
       .then((res) => {
-        this.setState({eventData: res});
-        //console.log(res);
+        this.setState({eventData: res.data});
+        console.log("Data Fetched");
+        // console.log(res);
       })
       .catch((err) => {
-        //console.log(err);
+        console.log("Error Fetching Data")
+        // console.log(err);
       })
   }
 
