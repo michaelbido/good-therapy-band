@@ -4,9 +4,10 @@ const cors = require('cors');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const scheduler = require('node-schedule');
+const { mailer } = require('./mailer');
 const app = express();
 
-const { serverPort } = require('../variables');
+const { serverPort, mailInfo } = require('../variables');
 const { firebase } = require('./firebase');
 
 var db =  {
@@ -96,6 +97,22 @@ app.post('/api/newcontact', function(req, res, next) {
   }
   else {
     //contact.push(req.body);
+    // var mailOptions = {
+    //   from: mailInfo.login,
+    //   to: mailInfo.login,
+    //   subject: 'This is the subject of the mail',
+    //   html: '<p>TEST OF EMAIL CONTENT</p>'
+    // }
+
+    // mailer.sendMail(mailOptions,(err, info) => {
+    //   if (err) {
+    //     //console.log(err)
+    //   }
+    //   else {
+    //     //console.log(info);
+    //   }
+    // })
+
     res.send("Message sent");
   }
 });

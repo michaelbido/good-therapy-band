@@ -11,3 +11,8 @@ module.exports.fb = {
 
 module.exports.serverPort = parseInt(process.env.SERVER_PORT, 10);
 
+module.exports.mailInfo = {
+  login: process.env.MAIL_USERNAME,
+  pass: process.env.MAIL_PASS
+}
+
