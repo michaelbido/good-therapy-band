@@ -11,14 +11,18 @@ const transporter = nodemailer.createTransport({
 
 function sendMail(name, returnEmail, message) {
 
+  var nameFixed  = name.replace(/<+|>+/gu, "!danger!");
+  var returnEmailFixed = returnEmail.replace(/<+|>+/gu, "!danger!");
+  var messageFixed  = message.replace(/<+|>+/gu, "!danger!");
+
   var body =
     "<h1>NEW CONTACT SUBMISSION (no reply)</h1>" +
     "<h3>Name of sender: </h3>" +
-    "<p>" + name + "</p>" +
+    "<p>" + nameFixed + "</p>" +
     "<h3>Entered return email: </h3>" +
-    "<p>" + returnEmail + "</p>" +
+    "<p>" + returnEmailFixed + "</p>" +
     "<h3>Message (do not click links): </h3>" +
-    "<p>" + message + "</p>" +
+    "<p>" + messageFixed + "</p>" +
     "<p><strong>Please be cautious with every message, as senders may be trying to do something malicious. Do not click links.</strong></p>" +
     "<p>Do not reply to this email.</p>"
 
@@ -27,7 +31,7 @@ function sendMail(name, returnEmail, message) {
 
   var mailOptions = {
     from: mailInfo.from,
-    to: mailInfo.to,
+    to: mailInfo.from,
     subject: 'New Contact Query from GoodTherapyBandtx.com, ' + date,
     html: body
   }

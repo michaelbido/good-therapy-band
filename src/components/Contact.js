@@ -14,24 +14,39 @@ class Contact extends Component {
       whoisthis: '',
       email: '',
       message: '',
+      hasSubmitted: false,
+      repeatedSubmit: false
     }
   }
 
   handleSubmit = (event) => {
-    event.preventDefault();
-    axios.post('/api/newcontact', {
-      name: this.state.whoisthis,
-      email: this.state.email,
-      message: this.state.message
-    })
-    .then(function (response) {
-      alert("Your info was submitted. Thanks!");
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-      alert("Please ensure the fields are formatted correctly.")
-    });
+    if (!this.state.hasSubmitted) {
+      event.preventDefault();
+      var who = this.state.whoisthis.replace(/<+|>+/gu, "!danger!");
+      var email = this.state.email.replace(/<+|>+/gu, "!danger!");;
+      var msg =this.state.message.replace(/<+|>+/gu, "!danger!");;
+      axios.post('/api/newcontact', {
+        name: who,
+        email: email,
+        message: msg
+      })
+      .then(function (response) {
+        alert("Your info was submitted. Thanks!");
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert("Please ensure the fields are formatted correctly.")
+      });
+      this.setState({hasSubmitted: true})
+    }
+    else {
+      if (!this.state.repeatedSubmit) {
+        this.setState({repeatedSubmit: true});
+        alert("Thanks for submitting.");
+      }
+      // do nothing on repeated submits
+    }
   }
 
   handleInputChange = (event) => {

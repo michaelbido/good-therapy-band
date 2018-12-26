@@ -5,7 +5,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: black;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   color:rgba(0, 0, 0, 0.9);
   position: relative;
@@ -18,5 +18,5 @@ h2 {
 }
 
 p {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }

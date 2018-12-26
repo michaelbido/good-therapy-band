@@ -97,7 +97,6 @@ app.post('/api/newcontact', function(req, res, next) {
   }
   else {
     mailer(req.body.name, req.body.email, req.body.message);
-
     res.send("Message sent");
   }
 });

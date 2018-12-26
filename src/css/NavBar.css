@@ -13,9 +13,8 @@
   display: inline-block;
   background: none;
   border: none;
-  border-top: solid transparent 2px;
-  border-radius: 2px;
-  transition: border-top 1s;
+  border-bottom: solid transparent 2px;
+  transition: border-bottom 1s;
   color:rgba(255, 255, 255, 1.0);
   width: 6em;
   height: 3em;
@@ -28,12 +27,11 @@
 
 .navbar button:focus {
   outline: 0;
-  border-top: solid white 2px;
-  border-radius: 2px;
+  border-bottom: solid white 2px;
 }
 
 .navbar button:hover {
-  border-top: solid white 2px;
+  border-bottom: solid white 2px;
   cursor: pointer;
 }
 

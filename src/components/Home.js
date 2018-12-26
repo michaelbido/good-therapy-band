@@ -75,8 +75,7 @@ class Home extends Component {
             <h2>Good</h2>
             <h2>Therapy</h2>
             <hr />
-            <p>classical</p>
-            <p>rock</p>
+            <p>Bringing an eclectic mix of vocal-centric tunes to cure what ails ya!</p>
           </div>
           <div className="social-container">
             <p>Like us on Facebook </p>
