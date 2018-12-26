@@ -96,22 +96,7 @@ app.post('/api/newcontact', function(req, res, next) {
     res.sendStatus(400);
   }
   else {
-    //contact.push(req.body);
-    // var mailOptions = {
-    //   from: mailInfo.login,
-    //   to: mailInfo.login,
-    //   subject: 'This is the subject of the mail',
-    //   html: '<p>TEST OF EMAIL CONTENT</p>'
-    // }
-
-    // mailer.sendMail(mailOptions,(err, info) => {
-    //   if (err) {
-    //     //console.log(err)
-    //   }
-    //   else {
-    //     //console.log(info);
-    //   }
-    // })
+    mailer(req.body.name, req.body.email, req.body.message);
 
     res.send("Message sent");
   }

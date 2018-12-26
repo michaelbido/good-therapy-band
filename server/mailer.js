@@ -1,12 +1,45 @@
-var nodemailer = require('nodemailer');
-var { mailInfo }= require('../variables');
+const nodemailer = require('nodemailer');
+const { mailInfo } = require('../variables');
 
-var transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: mailInfo.login,
+    user: mailInfo.from,
     pass: mailInfo.pass
   }
 });
 
-module.exports.mailer = transporter;
+function sendMail(name, returnEmail, message) {
+
+  var body =
+    "<h1>NEW CONTACT SUBMISSION (no reply)</h1>" +
+    "<h3>Name of sender: </h3>" +
+    "<p>" + name + "</p>" +
+    "<h3>Entered return email: </h3>" +
+    "<p>" + returnEmail + "</p>" +
+    "<h3>Message (do not click links): </h3>" +
+    "<p>" + message + "</p>" +
+    "<p><strong>Please be cautious with every message, as senders may be trying to do something malicious. Do not click links.</strong></p>" +
+    "<p>Do not reply to this email.</p>"
+
+  // console.log(body);
+  var date = new Date();
+
+  var mailOptions = {
+    from: mailInfo.from,
+    to: mailInfo.to,
+    subject: 'New Contact Query from GoodTherapyBandtx.com, ' + date,
+    html: body
+  }
+
+  transporter.sendMail(mailOptions,(err, info) => {
+    if (err) {
+      //console.log(err)
+    }
+    else {
+      //console.log(info);
+    }
+  })
+}
+
+module.exports.mailer = sendMail;
