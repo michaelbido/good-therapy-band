@@ -31,7 +31,7 @@ function sendMail(name, returnEmail, message) {
 
   var mailOptions = {
     from: mailInfo.from,
-    to: mailInfo.from,
+    to: mailInfo.to,
     subject: 'New Contact Query from GoodTherapyBandtx.com, ' + date,
     html: body
   }
