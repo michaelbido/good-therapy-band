@@ -5,6 +5,43 @@
   margin: auto;
 }
 
+.music-section {
+  margin: 1em 0 0 0;
+}
+
+.music-links {
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 2em 0 2em 0;
+}
+
+.music-link__item {
+  background-color: black;
+  padding: 1em 3em 1em 3em;
+  text-align: center;
+}
+
+.music-link__item h3 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.music-links a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Cabin', Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.music-container h3 {
+  text-transform: uppercase;
+  font-family: 'Cabin', Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
 .iframe-wrapper {
   position: relative;
   height: 0;
@@ -12,7 +49,7 @@
   padding-top: 30px; 
   height: 0; 
   overflow: hidden;
-  margin: 3em;
+  margin: 2em 3em 2em 3em;
 }
 
 .iframe-wrapper iframe {
@@ -21,7 +58,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(0deg,rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('../images/loading-spin-min.gif');
+  background-image: url('../images/loading-spin-min.gif');
   background-repeat: no-repeat;
   background-position: center center;
 }
