@@ -4,6 +4,9 @@ import CircleProfiles from './CircleProfile';
 
 import '../css/Home.css'
 
+const SONG_QUOTE = "They are one person, they are two alone, they are three together, they are for each other."
+const QUOTE_AUTHOR = "Stephen Stills"
+
 const bandMembers = [
   {
     name: "David Huffman",
@@ -84,8 +87,8 @@ class Home extends Component {
         </div>
         <div className="hero-banner">
           <div className="hero-content-container">
-            <p id="quote-text"> Keep on rockin' in the free world.</p>
-            <p id="quote-author">- Neil Young</p>
+            <p id="quote-text"> {SONG_QUOTE}</p>
+            <p id="quote-author">- {QUOTE_AUTHOR}</p>
           </div>
         </div>
         <div>
@@ -101,6 +104,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-//             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGoodtherapyband%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=280016605231" width="340" height="214" style={{overflow:'hidden'}} scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-//             <div className="fb-page" data-href="https://www.facebook.com/goodtherapyband/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/goodtherapyband/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/goodtherapyband/">Good Therapy</a></blockquote></div>

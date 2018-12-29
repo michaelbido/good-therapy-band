@@ -20,8 +20,8 @@ class Contact extends Component {
   }
 
   handleSubmit = (event) => {
+    event.preventDefault();
     if (!this.state.hasSubmitted) {
-      event.preventDefault();
       var who = this.state.whoisthis.replace(/<+|>+/gu, "!danger!");
       var email = this.state.email.replace(/<+|>+/gu, "!danger!");;
       var msg =this.state.message.replace(/<+|>+/gu, "!danger!");;
@@ -90,8 +90,3 @@ class Contact extends Component {
 }
 
 export default Contact;
-
-// <form>
-/* <div className="g-recaptcha" data-sitekey="6LcahHYUAAAAACfdXOolktkwN9T6Vy115PfPsZD5"></div>
-<input type="submit" value="Submit"/>
-</form> */
