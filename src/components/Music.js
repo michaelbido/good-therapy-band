@@ -26,6 +26,12 @@ class Music extends Component {
           <div className="iframe-wrapper">
             <iframe title="Band - Ain't No Sunshine" width="560" height="340" src="https://www.youtube-nocookie.com/embed/FHk2fHLFPD8?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
           </div>
+          <div className="iframe-wrapper">
+            <iframe title="Band - Drift Away" width="560" height="340" src="https://www.youtube-nocookie.com/embed/TecHPh_MLSE?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+          </div>
+          <div className="iframe-wrapper">
+            <iframe title="Band - 455 Rocket" width="560" height="340" src="https://www.youtube-nocookie.com/embed/ySu85gH-TfQ?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+          </div>
         </div>
         <div className="music-section" id="trio">
           <hr />
